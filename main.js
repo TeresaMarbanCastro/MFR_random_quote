@@ -1,16 +1,16 @@
-function getQuote() {
-    fetch('https://type.fit/api/quotes')
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        let randomNumber = Math.floor(Math.random() * 100);
-        console.log(randomNumber);
-        document.querySelector('.quote-container').innerHTML = data[randomNumber].text;
-        return data
-    });
+const button = document.querySelector('.get-quote-btn');
+const quoteContainer = document.querySelector('.quote-container');
 
+const quoteURL = 'https://type.fit/api/quotes';
+
+function getQuote() {
+    fetch(quoteURL)
+    .then(response => response.json())
+    .then(data => {
+        let randomNumber = Math.floor(Math.random() * 100);
+        const quoteText = data[randomNumber].text;
+        quoteContainer.textContent = quoteText
+    })
 }
 
-const quoteBtn = document.querySelector('.get-quote-btn');
-quoteBtn.addEventListener('click', getQuote);
+button.addEventListener('click', getQuote);
