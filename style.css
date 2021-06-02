@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    font-family: 'Stint Ultra Condensed', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-container {
+    width: 100%;
+    height: 500px;
+    font-size: 100px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.get-quote-btn {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: dashed 2px white;
+    border-radius: 10%;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    cursor: pointer;
+}
